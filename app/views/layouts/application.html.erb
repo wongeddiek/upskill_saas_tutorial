@@ -1,14 +1,16 @@
+<!--this application.html.erb file runs on every webpage-->
 <!DOCTYPE html>
 <html>
   <head>
     <title>Saasapp</title>
     <%= csrf_meta_tags %>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700,800|Ubuntu:400,700" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <!-- the "yield" code pulls the codes from the other view files, for instance, the home.html.erb-->
     <%= yield %>
   </body>
 </html>
