@@ -34,7 +34,12 @@
         </div><!-- /.navbar-collapse -->
       </div>
     </nav>
-
+    
+    <div class="container">
+      <% flash.each do |type, msg| %>
+          <%= content_tag :div, msg, class: "alert alert-#{type}" %>
+      <% end %>
+    </div>
     <!-- the "yield" code pulls the codes from the other view files, for instance, the home.html.erb-->
     <%= yield %>
 
